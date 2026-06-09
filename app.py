@@ -295,7 +295,7 @@ with tab2:
     # ------------------------------------------------------------------
     # CHART 1 HIERARCHY: HS CODES VS CLEARANCE DURATION
     # ------------------------------------------------------------------
-    st.subheader("Chart 1")
+    st.subheader("Commodity Classification Impact on Customs Clearance")
     fig_row1 = plt.figure(figsize=(24, 8))
     gs1 = gridspec.GridSpec(1, 2, width_ratios=[1.2, 1.0])
     
@@ -338,7 +338,7 @@ with tab2:
     # ------------------------------------------------------------------
     # CHART 2 HIERARCHY: INTERNATIONAL FREIGHT LANE ANALYSIS
     # ------------------------------------------------------------------
-    st.subheader("Chart 2")
+    st.subheader("Origin Country & Port-of-Loading Impact Analysis")
     fig_row2 = plt.figure(figsize=(24, 8))
     gs2 = gridspec.GridSpec(1, 2)
     
@@ -378,7 +378,7 @@ with tab2:
     # ------------------------------------------------------------------
     # CHART 3 HIERARCHY: REGULATORY PROGRAM EFFECTIVENESS
     # ------------------------------------------------------------------
-    st.subheader("Chart 3")
+    st.subheader("Regulatory Compliance & Trade Facilitation Programs")
     fig_row3 = plt.figure(figsize=(24, 8))
     gs3 = gridspec.GridSpec(1, 2)
     
@@ -419,7 +419,7 @@ with tab2:
     # ------------------------------------------------------------------
     # CHART 4 HIERARCHY: RISK THRESHOLDS AND PROFILE CORRELATIONS
     # ------------------------------------------------------------------
-    st.subheader("Chart 4")
+    st.subheader("Operational Risk Indicators & Clearance Performance")
     fig_row4 = plt.figure(figsize=(24, 8))
     gs4 = gridspec.GridSpec(1, 2)
     
