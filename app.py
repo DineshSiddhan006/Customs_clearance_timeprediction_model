@@ -74,15 +74,16 @@ sys.modules['__main__'] = sys.modules[__name__]
 # ==============================================================================
 @st.cache_resource
 def load_production_pipeline():
-    assets_dir = "deployed_assets"
-    preprocessor_path = os.path.join(assets_dir, "custom_preprocessor_pipeline.pkl")
-    model_path = os.path.join(assets_dir, "winning_clearance_model.pkl")
-    
+
+    preprocessor_path = "custom_preprocessor_pipeline.pkl"
+    model_path = "winning_clearance_model.pkl"
+
     with open(preprocessor_path, "rb") as f:
         loaded_preprocessor = pickle.load(f)
+
     with open(model_path, "rb") as f:
         loaded_model = pickle.load(f)
-        
+
     return loaded_preprocessor, loaded_model
 
 @st.cache_data
