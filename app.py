@@ -310,7 +310,7 @@ with tab2:
     eda_df['hs_chapter_named'] = eda_df['hs_chapter'].map(chapter_labels).fillna(eda_df['hs_chapter'].apply(lambda x: f"Ch.{x}: Other Cargo"))
     chapter_medians = eda_df.groupby('hs_chapter_named')['clearance_duration_hours'].median().sort_values(ascending=False).reset_index()
     sns.barplot(ax=ax1, data=chapter_medians, y='hs_chapter_named', x='clearance_duration_hours', color='#438a5e')
-    ax1.set_title("Graph A: HS Code Chapter vs Clearance Duration", weight='bold', pad=15)
+    ax1.set_title("HS Code Chapter vs Clearance Duration", weight='bold', pad=15)
     ax1.set_xlabel("Clearance Duration (Hours)", weight='bold')
     ax1.set_ylabel("HS Chapter Classification", weight='bold')
     ax1.set_xlim(0, 70)
@@ -322,7 +322,7 @@ with tab2:
     eda_df['hs_heading'] = eda_df['hs_code'].astype(str).str.zfill(12).str[:4]
     heading_medians = eda_df.groupby('hs_heading')['clearance_duration_hours'].median().sort_values(ascending=False).head(10).reset_index()
     sns.barplot(ax=ax2, data=heading_medians, y='hs_heading', x='clearance_duration_hours', hue='hs_heading', palette="YlOrRd_r", legend=False)
-    ax2.set_title("Graph B: Top 10 High-Delay HS Headings vs Clearance Duration", weight='bold', pad=15)
+    ax2.set_title("Top 10 High-Delay HS Headings vs Clearance Duration", weight='bold', pad=15)
     ax2.set_xlabel("Clearance Duration (Hours)", weight='bold')
     ax2.set_ylabel("HS Heading Category Code", weight='bold')
     ax2.set_xlim(0, 70)
